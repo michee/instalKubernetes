@@ -15,3 +15,15 @@ sudo echo '/media/ssd *(rw,sync,no_subtree_check)' >> /etc/exports
 sudo exportfs -ra
 sudo systemctl restart nfs-kernel-server
 
+
+# generate git key
+ssh-keygen -t rsa -b 4096 -C "michee@kth.se"
+cat ~/.ssh/id_rsa.pub
+
+
+# get the scripts
+cd ~
+git clone git@github.com:michee/instalKubernetes.git
+cd installKubernetes
+
+
