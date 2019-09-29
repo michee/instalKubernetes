@@ -29,12 +29,12 @@ sudo apt-get install -y --allow-downgrades docker-ce=$DOCKER_V
 sudo apt-get install -y kubeadm=$KUBE_V kubectl=$KUBE_V kubelet=$KUBE_V
 
 #install CNI plugins
-cd ~
-git clone https://github.com/containernetworking/plugins.git
-cd ~/plugins
-# ./build_linux.sh # to slow
-sudo mkdir -p /opt/cni/bin
-sudo cp bin/* /opt/cni/bin/
+# cd ~
+# git clone https://github.com/containernetworking/plugins.git
+# cd ~/plugins
+# # ./build_linux.sh # to slow
+# sudo mkdir -p /opt/cni/bin
+# sudo cp ~/plugins/bin/* /opt/cni/bin/
 
 #Help Flannel
 #sudo sysctl net.bridge.bridge-nf-call-iptables=1
